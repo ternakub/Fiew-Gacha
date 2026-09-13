@@ -2,7 +2,6 @@ services:
   - type: web
     name: Fiew-Gacha
     runtime: static
-    plan: free
     buildCommand: echo "Static site ready"
     staticPublishPath: .
 
