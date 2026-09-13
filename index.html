@@ -108,15 +108,15 @@
     </div>
   </div>
   <div class="shell">
-    <header><div class="brand">กล่องสุ่มไอ่ฟิว<span>โว้ยยยยยย...</span></div><div class="header-actions"><div class="tag">SAME FIEW · DIFFERENT VIBES · BUILD V5</div><button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="ปิดเสียง">🔊 เสียง: เปิด</button></div></header>
+    <header><div class="brand">กล่องสุ่มไอ่ฟิว<span>โว้ยยยยยย...</span></div><div class="header-actions"><div class="tag">SAME FIEW · DIFFERENT VIBES</div><button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="true" aria-label="ปิดเสียง">🔊 เสียง: เปิด</button></div></header>
     <main>
       <section id="home" class="view active" aria-labelledby="home-title">
-        <div class="copy"><div class="eyebrow">FIEW FIGURE COLLECTION</div><h1 id="home-title">ใครเก๋าก็สุ่มกูดิ<br><em>ยุธยาอะรู้จักเปล่า</em></h1><p class="sub">ตอบคำถามกวน ๆ ครั้งละ 3 ข้อ แล้วเปิดกล่องดูว่าฟิวร่างไหนจะมาหาคุณ</p><button class="primary" id="start">เริ่มเลย ✦</button></div>
+        <div class="copy"><div class="eyebrow">FIEW FIGURE COLLECTION</div><h1 id="home-title">ใครเก๋าก็สุ่มกูดิ<br><em>ยุธยาอะรู้จักเปล่า</em></h1><p class="sub">ตอบคำถามกวน ๆ 3 ข้อ แล้วเปิดกล่องดูว่าฟิวร่างไหนจะมาหาคุณ</p><button class="primary" id="start">เริ่มเลย ✦</button></div>
         
       </section>
       <section id="quiz" class="view" aria-labelledby="question-title"><div class="question-layout"><div class="eyebrow">ก่อนเปิดกล่อง</div><div class="progress" id="progress" aria-hidden="true"></div><div class="panel"><div id="counter" class="eyebrow"></div><h2 id="question-title"></h2><div class="choice-list"><button class="choice" id="answer-a"><b>A</b><span></span></button><button class="choice" id="answer-b"><b>B</b><span></span></button></div></div></div></section>
       <section id="box" class="view" aria-labelledby="box-title"><div class="question-layout center panel"><div id="chest-scene" class="chest-scene" aria-label="หีบสมบัติโบราณที่ยังไม่เปิด"><span class="chest-mouth" aria-hidden="true"></span><span class="chest-light" aria-hidden="true"></span><span class="chest-sparks" aria-hidden="true"></span><img class="chest-layer chest-base" alt=""><img class="chest-layer chest-lid" alt=""><span class="chest-flash" aria-hidden="true"></span></div><h2 id="box-title">ตอบครบแล้ว พร้อมเปิดกล่องไหม?</h2><p id="box-status" class="sub">การ์ดของคุณเตรียมพร้อมอยู่หลังหีบแล้ว</p><button class="primary" id="open-box">เปิดกล่องสุ่ม</button></div></section>
-      <section id="reveal" class="view" aria-labelledby="reveal-title"><div class="reveal-layout center"><div id="rarity-text" class="eyebrow">การ์ดที่คุณได้รับ</div><h2 id="reveal-title"></h2><div class="card-wrap"><img id="result-image" class="result" alt=""><div id="card-nameplate" class="card-nameplate"></div></div><div class="actions"><button id="download" class="primary" type="button">ดาวน์โหลดการ์ด JPG</button><button id="again" class="secondary">สุ่มใหม่</button></div><p class="hint">สุ่มใหม่จะต้องตอบคำถามชุดถัดไปก่อนทุกครั้ง</p></div></section>
+      <section id="reveal" class="view" aria-labelledby="reveal-title"><div class="reveal-layout center"><div id="rarity-text" class="eyebrow">การ์ดที่คุณได้รับ</div><h2 id="reveal-title"></h2><div class="card-wrap"><img id="result-image" class="result" alt=""><div id="card-nameplate" class="card-nameplate"></div></div><div class="actions"><button id="download" class="primary" type="button">ดาวน์โหลดการ์ด JPG</button><button id="again" class="secondary">สุ่มใหม่</button></div><p class="hint">สุ่มใหม่จะต้องตอบคำถาม 3 ข้อใหม่ทุกครั้ง</p></div></section>
     </main>
   </div>
   <script>
@@ -130,16 +130,13 @@
       {q:"ไอ่ฟิวชอบกินอะไร",a:"ไก่",b:"ไก่ที่ไม่ใช่ไก่"},
       {q:"วันอะไรที่ไอ่ฟิวชอบ",a:"วันพระ",b:"วันนี้แม่ไม่อยู่มาหาหน่อย"},
       {q:"ไอ่ฟิวเกิดวันไหน",a:"วันพระ",b:"วันไหนก็ได้ไอ่สัส"},
-      {q:"ไอ่ฟิวติดอะไร",a:"ติดหี",b:"หีติด"},
-      {q:"ถ้ำไหนที่ไอ่ฟิวชอบ",a:"ถ้ำที่หญ้ารก",b:"ถ้ำไหนก็ได้ที่มีรู"},
-      {q:"ระหว่าง นม กับ หี ไอ่ฟิวชอบอะไร",a:"ชอบนม",b:"ชอบรูน้ำเยิ้มๆ"}
+      {q:"ไอ่ฟิวติดอะไร",a:"ติดหี",b:"หีติด"}
     ];
     const chestImage='assets/chest.png';
     document.querySelectorAll('.chest-layer').forEach(img=>{img.src=chestImage});
     const resultImage=document.getElementById('result-image');
-    const embeddedCards=[{"id":"FIEW-001","rarity":1,"role":"นักสำรวจ","name":"ฟิวนักสำรวจ","gender":"ชาย","body":"สมส่วน","year":1900,"location":"อุโมงค์หินถล่ม","image":"assets/cards/fiew-001.jpg","status":"ready"},{"id":"FIEW-002","rarity":1,"role":"คนเขียนแผนที่","name":"ฟิวคนเขียนแผนที่","gender":"ชาย","body":"ผอม","year":1917,"location":"ทางเดินคบเพลิง","image":"assets/cards/fiew-002.jpg","status":"ready"},{"id":"FIEW-003","rarity":1,"role":"คนขุดแร่","name":"ฟิวคนขุดแร่","gender":"หญิง","body":"อ้วน","year":1934,"location":"เหมืองผลึกเขียว","image":"assets/cards/fiew-003.jpg","status":"ready"},{"id":"FIEW-004","rarity":1,"role":"นักโบราณคดี","name":"ฟิวนักโบราณคดี","gender":"ชาย","body":"สมส่วน","year":1951,"location":"ห้องจารึกโบราณ","image":"assets/cards/fiew-004.jpg","status":"ready"},{"id":"FIEW-005","rarity":1,"role":"ผู้ปลดกับดัก","name":"ฟิวผู้ปลดกับดัก","gender":"ชาย","body":"ผอม","year":1968,"location":"เขาวงกตกับดัก","image":"assets/cards/fiew-005.jpg","status":"ready"},{"id":"FIEW-006","rarity":1,"role":"พ่อค้าสมบัติ","name":"ฟิวพ่อค้าสมบัติ","gender":"ชาย","body":"อ้วน","year":1985,"location":"ตลาดใต้ดิน","image":"assets/cards/fiew-006.jpg","status":"ready"},{"id":"FIEW-007","rarity":1,"role":"หมอประจำคณะ","name":"ฟิวหมอประจำคณะ","gender":"หญิง","body":"สมส่วน","year":2002,"location":"บ่อน้ำใต้ถ้ำ","image":"assets/cards/fiew-007.jpg","status":"ready"},{"id":"FIEW-008","rarity":1,"role":"ผู้เฝ้าหีบ","name":"ฟิวผู้เฝ้าหีบ","gender":"ชาย","body":"ผอม","year":1908,"location":"ห้องเก็บหีบ","image":"assets/cards/fiew-008.jpg","status":"ready"},{"id":"FIEW-009","rarity":1,"role":"คนเลี้ยงก็อบลิน","name":"ฟิวคนเลี้ยงก็อบลิน","gender":"ชาย","body":"อ้วน","year":1925,"location":"โพรงก็อบลิน","image":"assets/cards/fiew-009.jpg","status":"ready"},{"id":"FIEW-010","rarity":1,"role":"นักเก็บของเก่า","name":"ฟิวนักเก็บของเก่า","gender":"ชาย","body":"สมส่วน","year":1942,"location":"คลังโบราณวัตถุ","image":"assets/cards/fiew-010.jpg","status":"ready"},{"id":"FIEW-011","rarity":2,"role":"นักตีเหล็ก","name":"ฟิวนักตีเหล็ก","gender":"หญิง","body":"ผอม","year":1959,"location":"โรงตีเหล็กใต้ดิน","image":"assets/cards/fiew-011.jpg","status":"ready"},{"id":"FIEW-012","rarity":2,"role":"ช่างไขประตูลับ","name":"ฟิวช่างไขประตูลับ","gender":"ชาย","body":"อ้วน","year":1976,"location":"ประตูหินลับ","image":"assets/cards/fiew-012.jpg","status":"ready"},{"id":"FIEW-013","rarity":2,"role":"นักปรุงยา","name":"ฟิวนักปรุงยา","gender":"ชาย","body":"สมส่วน","year":1993,"location":"ห้องปรุงยา","image":"assets/cards/fiew-013.jpg","status":"ready"},{"id":"FIEW-014","rarity":2,"role":"นักล่าสัตว์ประหลาด","name":"ฟิวนักล่าสัตว์ประหลาด","gender":"ชาย","body":"ผอม","year":2010,"location":"สะพานเหวลึก","image":"assets/cards/fiew-014.jpg","status":"ready"},{"id":"FIEW-015","rarity":2,"role":"ผู้ทดสอบกับดัก","name":"ฟิวผู้ทดสอบกับดัก","gender":"หญิง","body":"อ้วน","year":1916,"location":"ทางเดินหนาม","image":"assets/cards/fiew-015.jpg","status":"ready"},{"id":"FIEW-016","rarity":2,"role":"คนดูแลคบเพลิง","name":"ฟิวคนดูแลคบเพลิง","gender":"ชาย","body":"สมส่วน","year":1933,"location":"โถงเสาไฟ","image":"assets/cards/fiew-016.jpg","status":"ready"},{"id":"FIEW-017","rarity":2,"role":"คนเฝ้าห้องสมุดต้องห้าม","name":"ฟิวคนเฝ้าห้องสมุดต้องห้าม","gender":"ชาย","body":"ผอม","year":1950,"location":"หอสมุดต้องห้าม","image":"assets/cards/fiew-017.jpg","status":"ready"},{"id":"FIEW-018","rarity":2,"role":"คนส่งข่าวในถ้ำ","name":"ฟิวคนส่งข่าวในถ้ำ","gender":"ชาย","body":"อ้วน","year":1967,"location":"ทางน้ำใต้ดิน","image":"assets/cards/fiew-018.jpg","status":"ready"},{"id":"FIEW-019","rarity":3,"role":"นักเก็บเศษสมบัติผู้ยากจน","name":"ฟิวนักเก็บเศษสมบัติผู้ยากจน","gender":"ชาย","body":"สมส่วน","year":1984,"location":"กองสมบัติแตก","image":"assets/cards/fiew-019.jpg","status":"ready"},{"id":"FIEW-020","rarity":3,"role":"ผู้ทำพิธีเวทโบราณ","name":"ฟิวผู้ทำพิธีเวทโบราณ","gender":"ชาย","body":"ผอม","year":2001,"location":"แท่นพิธีเวท","image":"assets/cards/fiew-020.jpg","status":"ready"},{"id":"FIEW-021","rarity":3,"role":"นักสำรวจ","name":"ฟิวนักสำรวจ","gender":"ชาย","body":"อ้วน","year":1907,"location":"ถ้ำผลึกชั้นใน","image":"assets/cards/fiew-021.jpg","status":"ready"},{"id":"FIEW-022","rarity":3,"role":"คนเขียนแผนที่","name":"ฟิวคนเขียนแผนที่","gender":"ชาย","body":"สมส่วน","year":1924,"location":"ลานแผนที่เก่า","image":"assets/cards/fiew-022.jpg","status":"ready"},{"id":"FIEW-023","rarity":3,"role":"คนขุดแร่","name":"ฟิวคนขุดแร่","gender":"หญิง","body":"ผอม","year":1941,"location":"หลุมแร่ลึก","image":"assets/cards/fiew-023.jpg","status":"ready"},{"id":"FIEW-024","rarity":3,"role":"นักโบราณคดี","name":"ฟิวนักโบราณคดี","gender":"ชาย","body":"อ้วน","year":1958,"location":"ซากวิหาร","image":"assets/cards/fiew-024.jpg","status":"ready"},{"id":"FIEW-025","rarity":4,"role":"ผู้ปลดกับดัก","name":"ฟิวผู้ปลดกับดัก","gender":"ชาย","body":"สมส่วน","year":1975,"location":"ประตูหลายชั้น","image":"assets/cards/fiew-025.jpg","status":"ready"},{"id":"FIEW-026","rarity":4,"role":"พ่อค้าสมบัติ","name":"ฟิวพ่อค้าสมบัติ","gender":"ชาย","body":"ผอม","year":1992,"location":"ห้องแลกสมบัติ","image":"assets/cards/fiew-026.jpg","status":"ready"},{"id":"FIEW-027","rarity":4,"role":"หมอประจำคณะ","name":"ฟิวหมอประจำคณะ","gender":"หญิง","body":"อ้วน","year":2009,"location":"โถงรักษาบาดแผล","image":"assets/cards/fiew-027.jpg","status":"ready"},{"id":"FIEW-028","rarity":5,"role":"ผู้เฝ้าหีบ","name":"ฟิวผู้เฝ้าหีบ","gender":"ชาย","body":"สมส่วน","year":1915,"location":"บัลลังก์หีบ","image":"assets/cards/fiew-028.jpg","status":"ready"},{"id":"FIEW-029","rarity":5,"role":"คนเลี้ยงก็อบลิน","name":"ฟิวคนเลี้ยงก็อบลิน","gender":"ชาย","body":"ผอม","year":1932,"location":"บึงก็อบลิน","image":"assets/cards/fiew-029.jpg","status":"ready"},{"id":"FIEW-030","rarity":"special","role":"ผู้ทำพิธีเวทโบราณ","name":"ฟิวผู้ทำพิธีเวทโบราณ","gender":"ชาย","body":"อ้วน","year":1949,"location":"ใจกลางจักรวาลถ้ำ","image":"assets/cards/fiew-030.jpg","status":"ready"}];
-    const cardPool=embeddedCards.filter(c=>c.status==='ready');
-    let selectedCard=null;
+    let cardPool=[],selectedCard=null,cardReady=false;
+    const cardsPromise=fetch('cards.json').then(r=>{if(!r.ok)throw new Error('โหลดรายการการ์ดไม่สำเร็จ');return r.json()}).then(cards=>cardPool=cards.filter(c=>c.status==='ready'));
     const rarityWeights=[['1',34],['2',30],['3',20],['4',10],['5',5],['special',1]];
     function chooseCard(){
       let roll=Math.random()*100,rarity='1';
@@ -147,17 +144,18 @@
       const tier=cardPool.filter(c=>String(c.rarity)===rarity);
       return tier[Math.floor(Math.random()*tier.length)]||cardPool[Math.floor(Math.random()*cardPool.length)];
     }
-    function selectCard(){
+    function shuffle(items){
+      const copy=[...items];
+      for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}
+      return copy;
+    }
+    async function prepareCard(){
+      cardReady=false;selectedCard=null;
+      await cardsPromise;
       selectedCard=chooseCard();
-      if(!selectedCard)return false;
-      const chosenCard=selectedCard;
-      resultImage.onerror=()=>{
-        if(selectedCard!==chosenCard)return;
-        document.getElementById('box-status').textContent='ไฟล์ภาพการ์ดมีปัญหา กรุณากดสุ่มใหม่';
-        document.getElementById('open-box').disabled=true;
-      };
-      resultImage.src=selectedCard.image;
-      return true;
+      if(!selectedCard)throw new Error('ไม่พบการ์ด');
+      await new Promise((resolve,reject)=>{const img=new Image();img.onload=resolve;img.onerror=reject;img.src=selectedCard.image});
+      resultImage.src=selectedCard.image;cardReady=true;
     }
     // User-supplied soundtrack embedded so this preview works as one standalone HTML file.
     const soundToggle=document.getElementById('sound-toggle');
@@ -243,29 +241,26 @@
       tone(ctx,55,5.2,.95,'triangle',.29,35);
       hiss(ctx,5.27,.87,.15,820);
     }
-    const views=[...document.querySelectorAll('.view')];let questions=[],questionGroupIndex=0,activeGroupNumber=1,questionIndex=0,opening=false;
+    const views=[...document.querySelectorAll('.view')];let questions=[],questionIndex=0,opening=false,cardTask=null;
     function show(id){views.forEach(v=>v.classList.toggle('active',v.id===id));window.scrollTo(0,0)}
     function prepare(){
       experienceStarted=true;startBackground();
-      const groupStart=questionGroupIndex*3;
-      activeGroupNumber=questionGroupIndex+1;
-      questions=sampleQuestions.slice(groupStart,groupStart+3);
-      questionGroupIndex=(questionGroupIndex+1)%4;
-      questionIndex=0;
+      questions=shuffle(sampleQuestions).slice(0,3);questionIndex=0;
       const openButton=document.getElementById('open-box'),status=document.getElementById('box-status');
-      if(selectCard()){
-        status.textContent='การ์ดของคุณเตรียมพร้อมอยู่หลังหีบแล้ว';
-        openButton.disabled=false;
-      }else{
+      openButton.disabled=false;status.textContent='การ์ดของคุณกำลังเตรียมพร้อมอยู่หลังหีบ';
+      cardTask=prepareCard().then(()=>{
+        cardReady=true;status.textContent='การ์ดของคุณเตรียมพร้อมอยู่หลังหีบแล้ว';openButton.disabled=false;
+      }).catch(()=>{
         status.textContent='โหลดการ์ดไม่สำเร็จ กรุณากดสุ่มใหม่';openButton.disabled=true;
-      }
+      });
       renderQuestion();show('quiz');
     }
-    function renderQuestion(){const q=questions[questionIndex];document.getElementById('counter').textContent=`ชุดคำถาม ${activeGroupNumber} / 4 · คำถาม ${questionIndex+1} / ${questions.length}`;document.getElementById('question-title').textContent=q.q;document.querySelector('#answer-a span').textContent=q.a;document.querySelector('#answer-b span').textContent=q.b;document.getElementById('progress').innerHTML=questions.map((_,i)=>`<i class="${i<=questionIndex?'on':''}"></i>`).join('')}
+    function renderQuestion(){const q=questions[questionIndex];document.getElementById('counter').textContent=`คำถาม ${questionIndex+1} / 3`;document.getElementById('question-title').textContent=q.q;document.querySelector('#answer-a span').textContent=q.a;document.querySelector('#answer-b span').textContent=q.b;document.getElementById('progress').innerHTML=[0,1,2].map(i=>`<i class="${i<=questionIndex?'on':''}"></i>`).join('')}
     function answer(){
       questionIndex++;
-      if(questionIndex===questions.length){
+      if(questionIndex===3){
         show('box');
+        if(!cardReady){document.getElementById('box-status').textContent='Loading...';document.getElementById('open-box').disabled=true}
       }else renderQuestion();
     }
     const welcome=document.getElementById('welcome'),enterWithSound=document.getElementById('enter-with-sound');
@@ -282,7 +277,7 @@
       opening=true;
       const button=document.getElementById('open-box');
       const scene=document.getElementById('chest-scene');
-      if(!selectedCard)return;
+      if(!selectedCard||!cardReady)return;
       const rarity=String(selectedCard.rarity);
       const colors={'1':'241 244 236','2':'107 234 158','3':'102 212 255','4':'193 140 255','5':'255 206 100','special':'255 255 241'};
       scene.style.setProperty('--glow-rgb',colors[rarity]);
